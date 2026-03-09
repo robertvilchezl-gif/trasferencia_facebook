@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+    transition: background 0.6s;
+}
+
+/* 🌸 Fondo con imagen */
+body.rosa {
+    background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
+        url("foto.jpg") no-repeat center center/cover;
+}
+
+/* 🌙 Modo noche */
+body.noche {
+    background: radial-gradient(circle, #1a1a2e, #000);
+}
+
+/* 🌗 Botón modo */
+.modo {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 8px 14px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 20;
+}
+
+/* ✉️ Sobre */
+.sobre {
+    position: relative;
+    width: 340px;
+    height: 240px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.tapa {
+    position: absolute;
+    top: -25px;
+    width: 100%;
+    height: 100%;
+    background: #ff9ecf;
+    clip-path: polygon(0 0, 100% 0, 50% 55%);
+    transform-origin: top;
+    transition: transform 1s ease;
+    z-index: 4;
+}
+
+.carta {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%) translateY(60px);
+    width: 360px;
+    min-height: 420px;
+    background: rgba(0,0,0,0.78);
+    color: #ffd6eb;
+    border-radius: 20px;
+    padding: 24px 22px 60px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 1s ease;
+    overflow: hidden;
+}
+
+.sobre.abierto .tapa {
+    transform: rotateX(-180deg);
+}
+
+.sobre.abierto .carta {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-30px);
+}
+
+.titulo { margin: 0; font-size: 20px; }
+.nombre { margin: 6px 0 10px; color: #ffe6f2; font-size: 17px; }
+.mensaje { font-size: 15px; line-height: 1.5; white-space: pre-line; margin-bottom: 20px; }
+
+button {
+    padding: 10px 22px;
+    background: transparent;
+    border: 2px solid #ff9ed1;
+    color: #ff9ed1;
+    border-radius: 14px;
+    cursor: pointer;
+}
+button:hover {
+    background: #ff9ed1;
+    color: #000;
+}
+
+.oculto {
+    display: none;
+    margin-top: 14px;
+    font-style: italic;
+}
+
+.firma {
+    position: absolute;
+    bottom: 14px;
+    right: 18px;
+    font-size: 12px;
+    color: #ffcce6;
+    opacity: 0.85;
+    font-style: italic;
+    text-align: right;
+}
+
+/* 💫 Efectos */
+.flotante, .rosa-final {
+    position: fixed;
+    bottom: -30px;
+    animation: flotar linear forwards;
+    pointer-events: none;
+}
+
+@keyframes flotar {
+    to {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
+
+/* 🪟 Modal bienvenida */
+.bienvenida {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+.bienvenida-contenido {
+    background: rgba(0,0,0,0.85);
+    color: #ffd6eb;
+    border: 2px solid #ff9ed1;
+    border-radius: 18px;
+    padding: 22px;
+    width: min(90vw, 360px);
+    text-align: center;
+}
+
+.bienvenida-contenido button {
+    margin-top: 12px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 480px) {
+    .sobre { width: 300px; height: 220px; }
+    .carta { width: 90vw; min-height: 440px; }
+}

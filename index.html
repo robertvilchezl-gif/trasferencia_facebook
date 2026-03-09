@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 Feliz 14 de Febrero 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="rosa">
+
+<button class="modo" onclick="cambiarModo()">🌙 / 🌸</button>
+
+<div class="sobre" id="sobre" onclick="abrirCarta()">
+    <div class="tapa"></div>
+
+    <div class="carta">
+        <h1 class="titulo">💘 Feliz 14 de Febrero 💘</h1>
+        <h2 class="nombre" id="nombre"></h2>
+
+        <p id="mensaje" class="mensaje"></p>
+
+        <button onclick="sorpresa()">💝 Ver sorpresa</button>
+
+        <p id="oculto" class="oculto">
+            Gracias por entrar a este sitio 💖<br>
+            Tu visita fue registrada correctamente. ¡Disfruta la sorpresa! 🌹
+        </p>
+
+        <p class="firma">
+            Atentamente,<br>
+            tu Mecatrónico Favorito ⚙️💖
+        </p>
+    </div>
+</div>
+
+<!-- 🪟 Mensaje de bienvenida -->
+<div id="bienvenida" class="bienvenida">
+  <div class="bienvenida-contenido">
+    <p>
+      Gracias por ingresar a este sitio web 💖<br>
+      Tu acceso fue verificado correctamente. ¡Que disfrutes la experiencia!
+    </p>
+    <button onclick="cerrarBienvenida()">Entrar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
