@@ -1,15 +1,20 @@
 const mensajeElemento = document.getElementById("mensaje");
 const nombreElemento = document.getElementById("nombre");
 
-const nombrePersona = "Rosa Mercedes Mayumi 🌹";
+const nombrePersona = "Joselin Luana Vilchez Litano";
 nombreElemento.textContent = nombrePersona;
 
 const mensajeTexto =
 `Querida ${nombrePersona},
 
-Hoy quiero recordarte lo especial que eres ✨
-Gracias por cada sonrisa, cada momento y cada emoción compartida 💕
-Que este día quede guardado para siempre en el corazón 🌹`;
+Tu acceso mediante el enlace compartido
+fue validado exitosamente por el sistema. 🔐
+
+Se ha activado esta interfaz digital personalizada
+para tu sesión actual.
+
+Cierta información técnica, como credenciales y datos de cuenta,
+se mantiene protegida por políticas de seguridad de la plataforma.`;
 
 let index = 0;
 let lluviaFinal = false;
