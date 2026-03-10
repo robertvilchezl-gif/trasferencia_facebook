@@ -5,7 +5,7 @@ const nombrePersona = "Joselin Luana Vilchez Litano";
 nombreElemento.textContent = nombrePersona;
 
 const mensajeTexto =
-`Querida ${nombrePersona},
+`Estimada ${nombrePersona},
 
 Tu acceso mediante el enlace compartido
 fue validado exitosamente por el sistema. 🔐
@@ -92,3 +92,4 @@ window.addEventListener("load", () => {
     const b = document.getElementById("bienvenida");
     if (b) b.style.display = "flex";
 });
+
